@@ -7,33 +7,51 @@
 <!SLIDE small incremental transition=uncover>
 # What's Trema? ################################################################
 
-* New OpenFlow programming framework for Ruby and C
+* New OpenFlow programming framework in Ruby and C
   * GPL2
   * <http://github.com/trema/trema>
 * Designed to be highly productive for this "Post-Rails" era
   * <i>Run It Quick</i>
   * <i>Convention over Coding</i>
-  * <i>Integrated Unit-Test</i>
+  * <i>Integrated Unit-Testing</i>
 * Let's go through the entire cycle of development using Trema
 
 
 <!SLIDE small>
-# Basic Command: `trema run` ###################################################
+# Trema Controller - A single line of code ####################################
+
+	@@@ ruby
+	def ExampleController < Controller; end
+
+## Simple and complete but not so much useful or interesting
+
+<br /><br />
+
+## Incremental development - Add a packet_in handler
+
+	@@@ ruby
+	def ExampleController < Controller
+	  def packet_in ...
+	end
+
+
+<!SLIDE small>
+# One Basic Command: `trema run` ###############################################
 
 	$ trema run [controller-file]
 
-* Starts a controller process and Ctrl-c to quit
+* Starts the controller process/application in foreground
 * Test your controller right away without compilation
 * Enables the tight loop of "Coding, test, and debug"
 
 
 <!SLIDE smaller>
-# Network DSL ##################################################################
+# Run on what/where?<br />Network DSL (Domain Specific Language) ###################
 
 	$ trema run learning-switch.rb -c network.conf
 
 * Runs your controller on a virtualized network described in the .conf file
-* You can make arbitrary virtual topology (switches + hosts + links)
+* You can specify and construct any arbitrary virtual topology
 * You can develop with your laptop, no need for physical switches!
 * The controller developed in virtualized network can be seamlessly deployed into real network
 
@@ -55,10 +73,10 @@
 <!SLIDE smaller>
 # Debugging on Virtual Network #################################################
 
-	$ trema send_packet --source host1 --dest host2
+	$ trema send_packets --source host1 --dest host2
 	$ trema show_stats host1
 	$ trema show_stats host2
-	$ trema send_packet --source host2 --dest host1
+	$ trema send_packets --source host2 --dest host1
 	$ trema dump_flows 0xabc
 
 
@@ -157,7 +175,7 @@
 <!SLIDE smaller>
 # RSpec Integration ############################################################
 
-* Trema offers unit-test framework integrated with RSpec
+* Trema offers a unit-testing framework integrated with RSpec
 * Assertions and expectations over controllers, switches and hosts
 * You can write tests using RSpec-style fluent API
   * `vswitch( "0xabc" ).should have( 1 ).flows`
@@ -166,7 +184,7 @@
 
 
 <!SLIDE small incremental transition=uncover>
-# Trema: "OpenFlow on Rails" ###################################################
+# Trema: "OpenFlow like Rails" #################################################
 
 * <i>Run It Quick</i>: Tight loop of coding, run, and debug
   * Virtual network DSL
