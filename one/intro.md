@@ -11,8 +11,8 @@
   * GPL2
   * <http://github.com/trema/trema>
 * Designed to be highly productive for this "Post-Rails" era
-  * <i>Run It Quick</i>
-  * <i>Convention over Coding</i>
+  * <i>Run It Quick</i>: Tight loop of coding, run, and debug
+  * <i>Convention over Coding</i>: Write it short
   * <i>Integrated Unit-Testing</i>
 * Let's go through the entire cycle of development using Trema
 
@@ -97,8 +97,8 @@
 	end
 
 * Coding conventions for concise and compact code
-* All controllers are defined as a class derived from `Controller`
-* "handler name == message name" just like Rails controller
+  * All controllers are defined as a class derived from `Controller`
+  * "handler name == message name" just like Rails controller
 
 
 <!SLIDE smaller>
