@@ -21,7 +21,7 @@
 # Trema Controller - A single line of code ####################################
 
 	@@@ ruby
-	def ExampleController < Controller; end
+	class ExampleController < Controller; end
 
 ## Simple and complete but not so much useful or interesting
 
@@ -30,7 +30,7 @@
 ## Incremental development - Add a packet_in handler
 
 	@@@ ruby
-	def ExampleController < Controller
+	class ExampleController < Controller
 	  def packet_in ...
 	end
 
@@ -46,7 +46,7 @@
 
 
 <!SLIDE smaller>
-# Run on what/where?<br />Network DSL (Domain Specific Language) ###################
+# Run on what/where?<br />Network DSL (Domain Specific Language) ###############
 
 	$ trema run learning-switch.rb -c network.conf
 
@@ -85,14 +85,14 @@
 
 	@@@ ruby
 	class MyController < Controller
-	  def start  # start-up event handler
-	    # ...
-	  end
-	      
 	  def packet_in dpid, msg  # Packet-in received handler
 	    # ...
 	  end
 	
+	  def features_reply dpid, msg # features-reply handler
+	    # ...
+	  end
+	      
 	  # ...
 	end
 
