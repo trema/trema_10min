@@ -2,6 +2,7 @@
 # Trema in 10 Minutes ##########################################################
 
 ### Yasuhito Takamiya  `@yasuhito`
+### Nick Karanatsios `@nickkaranatsios`
 
 
 <!SLIDE small incremental transition=uncover>
