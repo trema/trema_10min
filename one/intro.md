@@ -12,7 +12,7 @@
   * GPL2
   * <http://github.com/trema/trema>
 * Designed to be highly productive for this "Post-Rails" era
-  * <i>Run It Quick</i>: Tight loop of coding, run, and debug
+  * <i>Run It Quick</i>: Closed-loop development - code, run, debug
   * <i>Convention over Coding</i>: Write it short
   * <i>Integrated Unit-Testing</i>
 * Let's go through the entire cycle of development using Trema
@@ -43,7 +43,7 @@
 
 * Starts the controller process/application in foreground
 * Test your controller right away without compilation
-* Enables the tight loop of "Coding, test, and debug"
+* Enables the closed loop of "Coding, run, and debug"
 
 
 <!SLIDE smaller>
@@ -187,7 +187,7 @@
 <!SLIDE small incremental transition=uncover>
 # Trema: "OpenFlow like Rails" #################################################
 
-* <i>Run It Quick</i>: Tight loop of coding, run, and debug
+* <i>Run It Quick</i>: Closed loop of coding, run, and debug
   * Virtual network DSL
   * `trema {run, send_packets, show_stats, dump_flows}`
 * <i>Convention Over Coding</i>: Write it short
