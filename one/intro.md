@@ -28,12 +28,12 @@
 
 <br /><br />
 
-## Incremental development - Add a packet_in handler
-
 	@@@ ruby
 	class ExampleController < Controller
 	  def packet_in ...
 	end
+
+## Incremental development - Add a packet_in handler
 
 
 <!SLIDE small>
